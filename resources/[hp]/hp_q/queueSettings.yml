@@ -1,0 +1,13 @@
+PriorityPlayers:
+    - SteamId: 110000107838782
+      Priority: 1
+
+    - SteamId: 1100001087DCC25
+      Priority: 2
+
+    - SteamId: 1100000077E8335
+      Priority: 3
+
+DisconnectGrace: 0
+QueueWhenNotFull: false
+DeferalDelay: 500
