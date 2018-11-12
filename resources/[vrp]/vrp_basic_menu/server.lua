@@ -94,7 +94,7 @@ function vRPbm.payPhoneNumber(user_id,phone)
 			if target ~= nil then
 			  vRP.setBankMoney({user_id,my_bank})
 			  TriggerClientEvent("pNotify:SendNotification", player,{text = "Du overførte <b style='color: #DB4646'>"..transfer.." DKK</b> til "..directory_name, type = "success", queue = "global", timeout = 4000, layout = "centerLeft",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"},killer = true})
-			  PerformHttpRequest('https://discordapp.com/api/webhooks/484346636164661260/gJN8LxjyFJfDg7gSPcp6gp-qpnYSL9BI21CuvvnmVKuDlIwO9pTKEZzeM7DW43OMBDxR', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = user_id .. " gav "..target_id.." et beløb på: " .. transfer .. " kroner"}), { ['Content-Type'] = 'application/json' })
+			  PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = user_id .. " gav "..target_id.." et beløb på: " .. transfer .. " kroner"}), { ['Content-Type'] = 'application/json' })
 
 			  local target_bank = vRP.getBankMoney({target_id}) + tonumber(transfer)
 			  vRP.setBankMoney({target_id,target_bank})

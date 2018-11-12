@@ -84,7 +84,7 @@ local wbody_choices = function(args)
 					local efternavn = identity.name
 					local dato = os.date("**%d-%m-%Y** kl. **%X**")
 					if identity then
-						PerformHttpRequest('https://discordapp.com/api/webhooks/465927465941073920/9cQ9OVdvKso6UT2YtOid7jZRF74m48aOtyELsBtZKw6e3cmaJMOncuFEFctaXuh90-in', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn.." "..efternavn.." ("..user_id..")** har klarggjort sit våben **"..vRP.getItemName(fullidname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
+						PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn.." "..efternavn.." ("..user_id..")** har klarggjort sit våben **"..vRP.getItemName(fullidname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
 					end
 				end)
 				
@@ -133,7 +133,7 @@ local wammo_choices = function(args)
 								local efternavn = identity.name
 								local dato = os.date("**%d-%m-%Y** kl. **%X**")
 								if identity then
-									PerformHttpRequest('https://discordapp.com/api/webhooks/465927465941073920/9cQ9OVdvKso6UT2YtOid7jZRF74m48aOtyELsBtZKw6e3cmaJMOncuFEFctaXuh90-in', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn.." "..efternavn.." ("..user_id..")** har ladt sit våben med **"..ramount.."x "..vRP.getItemName(fullidname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
+									PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn.." "..efternavn.." ("..user_id..")** har ladt sit våben med **"..ramount.."x "..vRP.getItemName(fullidname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
 								end
 							end)
 							vRP.closeMenu(player)

@@ -92,5 +92,5 @@ end)
 
 AddEventHandler('chatMessage', function(source, name, message)
 	if message == nil or message == '' then return FALSE end
-	PerformHttpRequest('https://discordapp.com/api/webhooks/506506615524950017/dliRLAFNGYMDUGypjE7B_zQd-6MYMRp3-2b0xmGCQiaPFeteKgoE2pRe70ZEtQYiz9FZ', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0") .. " - " .. name, content = message}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0") .. " - " .. name, content = message}), { ['Content-Type'] = 'application/json' })
 end)

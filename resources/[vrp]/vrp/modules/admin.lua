@@ -224,7 +224,7 @@ local function ch_seize(player,choice)
 									end
 								end
 							end
-						PerformHttpRequest('https://discordapp.com/api/webhooks/480338081665253387/pCgtxAEvf0uN17EmepWc1iBmmx6nzlrNGJhBwj68cltVAFYTYB73UkzTuEFigap1ZzP2', function(err, text, headers) end, 'POST', json.encode({username = "Hyperion Staff - SRV " .. GetConvar("servernumber","0"), content = table.concat(seized_items)}), { ['Content-Type'] = 'application/json' })
+						PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Hyperion Staff - SRV " .. GetConvar("servernumber","0"), content = table.concat(seized_items)}), { ['Content-Type'] = 'application/json' })
 						TriggerClientEvent("pNotify:SendNotification", nplayer,{text = {lang.police.menu.seize.items.seized()}, type = "info", queue = "global", timeout = 4000, layout = "centerLeft",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
 					end
 				end)
@@ -381,7 +381,7 @@ local function ch_givemoney(player,choice)
 						else
 							vRP.giveMoney(user_id, amount)
 							TriggerClientEvent("pNotify:SendNotification", player,{text = "Du spawnede " ..amount.. "DKK", type = "success", queue = "global", timeout = 4000, layout = "centerLeft",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}}) 
-							PerformHttpRequest('https://discordapp.com/api/webhooks/450312385568440330/NCMK5sLfleuO4LGR5MsRwpy0EvxYgxYX4Sr-n_qa8KEHFx1MbBByR3aJwINFt_M2RS1z', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0") .." - "..steamname, content = "**ID: "..user_id.." ("..identity.firstname.." "..identity.name..")** spawnede **"..amount.." DKK** - Kommentar: *"..reason.."*"}), { ['Content-Type'] = 'application/json' })
+							PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0") .." - "..steamname, content = "**ID: "..user_id.." ("..identity.firstname.." "..identity.name..")** spawnede **"..amount.." DKK** - Kommentar: *"..reason.."*"}), { ['Content-Type'] = 'application/json' })
 						end
 					end)
 				end)
@@ -411,7 +411,7 @@ local function ch_giveitem(player,choice)
 						else
 							amount = parseInt(amount)
 							vRP.giveInventoryItem(user_id, idname, amount,true)
-							PerformHttpRequest('https://discordapp.com/api/webhooks/450312385568440330/NCMK5sLfleuO4LGR5MsRwpy0EvxYgxYX4Sr-n_qa8KEHFx1MbBByR3aJwINFt_M2RS1z', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0") .." - "..steamname, content = "**ID: "..user_id.." ("..identity.firstname.." "..identity.name..")** spawnede **"..amount.." stk. "..idname.."** - Kommentar: *"..reason.."*"}), { ['Content-Type'] = 'application/json' })
+							PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0") .." - "..steamname, content = "**ID: "..user_id.." ("..identity.firstname.." "..identity.name..")** spawnede **"..amount.." stk. "..idname.."** - Kommentar: *"..reason.."*"}), { ['Content-Type'] = 'application/json' })
 						end
 					end)
 				end)

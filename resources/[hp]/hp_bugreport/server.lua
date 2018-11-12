@@ -14,7 +14,7 @@ AddEventHandler('bugreport', function(x, y, z, message, heading, speed, health, 
     local source = source
     local user_id = vRP.getUserId({source})
 
-    PerformHttpRequest('https://discordapp.com/api/webhooks/440662010884259840/GyyLWeG_zV8Rgir1tnTncumJM3_RwLlsr6rFj97NOCiiRHDD_QPzajVg3qqLP85fqFa4', 
+    PerformHttpRequest('https://discordapp.com/api/webhooks/511552868143071233/kp0J4RthH8k2oiLEJ6ZojOJ0oUR6PDokKe8Td7aHs7Rv4Orv4z7kQNTkrY2geP0leCw0', 
         function(err, text, headers) end, 
         'POST', 
         json.encode({username = "Server " .. GetConvar("servernumber","0"), 

@@ -77,7 +77,7 @@ function ch_give(idname, player, choice)
 							local dato = os.date("**%d-%m-%Y** kl. **%X**")
 							
 							if string.starts(idname, "wbody") or string.starts(idname, "wammo") then
-								PerformHttpRequest('https://discordapp.com/api/webhooks/465927465941073920/9cQ9OVdvKso6UT2YtOid7jZRF74m48aOtyELsBtZKw6e3cmaJMOncuFEFctaXuh90-in', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn1.." "..efternavn1.." ("..user_id..")** gav **"..fornavn2.." "..efternavn2.." ("..nuser_id..") "..amount.." stk. "..vRP.getItemName(idname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
+								PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn1.." "..efternavn1.." ("..user_id..")** gav **"..fornavn2.." "..efternavn2.." ("..nuser_id..") "..amount.." stk. "..vRP.getItemName(idname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
 							end
 						end
 					end)
@@ -114,9 +114,9 @@ function ch_trash(idname, player, choice)
 			TriggerClientEvent("DropSystem:drop", player, idname, amount) 
 			TriggerClientEvent('proximityMessage', -1, tonumber(source), "", {255, 168, 25}, 20, "** En person har smidt med "..vRP.getItemName(idname).. " **")
 			local dato = os.date("**%d-%m-%Y** kl. **%X**")
-			PerformHttpRequest('https://discordapp.com/api/webhooks/443721012496826368/rtvsFuS3gW70HN6jg2m0er_GDG9kE476ZN3XBU6I3wH0WdHcS9PWF5-M9YSBhD_0R3aa', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**ID: "..user_id.." ("..identity.firstname.." "..identity.name..")** smed med **"..amount.." stk. "..vRP.getItemName(idname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })       
+			PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**ID: "..user_id.." ("..identity.firstname.." "..identity.name..")** smed med **"..amount.." stk. "..vRP.getItemName(idname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })       
              if string.starts(idname, "hash") or string.starts(idname, "cocaine") or string.starts(idname, "lsd") or string.starts(idname, "weed") or string.starts(idname, "acid") or string.starts(idname, "cocaineplant") then
-            PerformHttpRequest('https://discordapp.com/api/webhooks/471820953387532301/dDvqq_bLGVLLKAY5xoOJtAbAHM5HuTNKken_nKqZxhNzgzMSJNUUzanIs1tNCKVyeEyQ', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**ID: "..user_id.." ** smed med **"..amount.." stk. "..vRP.getItemName(idname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**ID: "..user_id.." ** smed med **"..amount.." stk. "..vRP.getItemName(idname).."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
 		  	else
 		  end
          end
@@ -478,7 +478,7 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
 							local dato = os.date("**%d-%m-%Y** kl. **%X**")
 							if amount > 0 then
 								if string.starts(idname, "wbody") or string.starts(idname, "wammo") then
-									PerformHttpRequest('https://discordapp.com/api/webhooks/465927465941073920/9cQ9OVdvKso6UT2YtOid7jZRF74m48aOtyELsBtZKw6e3cmaJMOncuFEFctaXuh90-in', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn.." "..efternavn.." ("..user_id..")** tog **"..amount.." stk. "..vRP.getItemName(idname).."** fra køretøjet: **"..name.."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
+									PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn.." "..efternavn.." ("..user_id..")** tog **"..amount.." stk. "..vRP.getItemName(idname).."** fra køretøjet: **"..name.."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
 								end
 							end
 						end
@@ -537,7 +537,7 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
 							local dato = os.date("**%d-%m-%Y** kl. **%X**")
 							if amount > 0 then
 								if string.starts(idname, "wbody") or string.starts(idname, "wammo") then
-									PerformHttpRequest('https://discordapp.com/api/webhooks/465927465941073920/9cQ9OVdvKso6UT2YtOid7jZRF74m48aOtyELsBtZKw6e3cmaJMOncuFEFctaXuh90-in', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn.." "..efternavn.." ("..user_id..")** lagde **"..amount.." stk. "..vRP.getItemName(idname).."** i køretøjet: **"..name.."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
+									PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = "Server " .. GetConvar("servernumber","0"), content = "**"..fornavn.." "..efternavn.." ("..user_id..")** lagde **"..amount.." stk. "..vRP.getItemName(idname).."** i køretøjet: **"..name.."** - ("..dato..")"}), { ['Content-Type'] = 'application/json' })
 								end
 							end
 						end

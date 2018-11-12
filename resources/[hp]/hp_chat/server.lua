@@ -18,7 +18,7 @@ end)
 -- Send chat messages to discord :)
 AddEventHandler('chatMessage', function(source, name, message)
 	if message == nil or message == '' then return FALSE end
-	PerformHttpRequest('https://discordapp.com/api/webhooks/342194609788813313/KnVEdmD7Wvn9zQMlF5pH8mmzjQG6RZ3lUdCHPx2_0vqaFPILEAAqT8J4oJm7yTGWfcz7', function(err, text, headers) end, 'POST', json.encode({username = name, content = message}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest('https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT', function(err, text, headers) end, 'POST', json.encode({username = name, content = message}), { ['Content-Type'] = 'application/json' })
 end)
 
 -- player join messages

@@ -8,7 +8,7 @@ local announces = cfg.announces
 local sanitizes = module("cfg/sanitizes")
 
 --Discord
-local DiscordWebhook = 'https://discordapp.com/api/webhooks/439812069198397442/4LXi_OjDICqF1zYgSGqDz4NWS7UJe891P_TVktimsIOMCZ5O3v5DgdoGxg7Nr2QxA6eX'
+local DiscordWebhook = 'https://discordapp.com/api/webhooks/511553315222454273/6FSYOz2KxXVOQOsSg-tQXS4MQdNfELMg_QPqhD6FXM6cTqckYB1VT10a0fLSlMArlgaT'
 -- PerformHttpRequest(DiscordWebhook, function(Error, Content, Head) end, 'POST', json.encode({username = "Distrikt "..GetConvar("servernumber"), content = '**Indlæser...** | Status: Ny dag'}), { ['Content-Type'] = 'application/json' })
 
 function vRP.sendServiceAlert(sender, service_name,x,y,z,msg)
